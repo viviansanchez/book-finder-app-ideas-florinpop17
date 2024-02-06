@@ -10,21 +10,12 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.GREEN_200};
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+    font-size: clamp(1.5rem, 1.5rem + 2vw, 5rem);
     padding: 0;
   }
 
   svg {
     color: ${({ theme }) => theme.COLORS.GREEN_200};
-    font-size: 2.5rem;
-  }
-
-  @media screen and (min-width: 768px) {
-    h1 {
-      font-size: 4rem;
-    }
-
-    svg {
-      font-size: 5rem;
-    }
+    font-size: clamp(2.5rem, 2.5rem + 2vw, 5rem);
   }
 `
