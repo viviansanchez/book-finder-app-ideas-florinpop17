@@ -1,10 +1,10 @@
-import './styles.css'
+import { Logo } from './styles.ts'
 
 export function Home() {
 
   return (
     <>
-      <h1>Home page</h1>
+      <Logo>Home page</Logo>
     </>
   )
 }
