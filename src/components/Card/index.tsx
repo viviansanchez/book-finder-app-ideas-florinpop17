@@ -22,7 +22,7 @@ export function Card() {
         <p><span>Publisher: </span>book publisher</p>
         <p><span>Publish date: </span>book publish date</p>
 
-        <a href="#">Saiba mais</a>
+        <a href="#" target="_blank">Saiba mais</a>
       </BookInfoContainer>
 
     </Container>
