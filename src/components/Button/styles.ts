@@ -10,10 +10,11 @@ export const Container = styled.button`
   font-size: 1.5rem;
   font-weight: 700;
 
-  transition: background-color 0.5s;
+  transition: all 0.5s;
 
   &:hover {
     background-color: ${({ theme }) => theme.COLORS.ORANGE_100};
+    text-decoration: underline;
   }
 
   @media screen and (min-width: 768px) {
