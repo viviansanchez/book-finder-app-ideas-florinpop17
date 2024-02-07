@@ -5,27 +5,29 @@ export const Container = styled.div`
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
+  max-width: 15.625rem;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
+    width: 27rem;
+    max-width: 27rem;
   }
-
 `
-
 export const ImgContainer = styled.div`
-  /* border: 1px solid red; */
-
   > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
 
+  @media screen and (min-width: 768px) {
+    > img {
+      width: 7.125rem;
+    }
   }
 `
 
 export const BookInfoContainer = styled.div`
-  /* border: 1px solid green; */
-
   padding: 0.5rem;
 
   display: flex;
@@ -42,13 +44,15 @@ export const BookInfoContainer = styled.div`
     > span {
       color: ${({ theme }) => theme.COLORS.GREEN_200};
     }
+
+    > .author-name {
+      color: ${({ theme }) => theme.COLORS.ORANGE_200}
+    }
   }
 
   a {
-    /* border: 1px solid red; */
-
     align-self: flex-end;
-    padding: 0.2rem 0.3rem;
+    padding: 0.2rem 0.4rem;
     border-radius: 0.25rem;
 
     background-color: ${({ theme }) => theme.COLORS.ORANGE_100};
@@ -57,13 +61,13 @@ export const BookInfoContainer = styled.div`
     transition: all 0.2s;
 
     &:hover {
-      filter: brightness(0.9);
-      text-decoration: underline;
-      /* for some reason, this is not working. Leaving this here to find fix later, as it's high priority */
+      filter: brightness(1.2);
+      color: ${({ theme }) => theme.COLORS.GREEN_200};
     }
   }
 
   @media screen and (min-width: 768px) {
     justify-content: space-between;
+    width: 100%;
   }
 `
