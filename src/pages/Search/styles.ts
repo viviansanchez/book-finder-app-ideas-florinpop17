@@ -13,7 +13,7 @@ export const Container = styled.div`
   gap: 4rem;
 
   max-width: 62.5rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 `
 
 export const InputContainer = styled.div`
@@ -34,4 +34,15 @@ export const InputContainer = styled.div`
     display: flex;
     justify-content: center;
   }
+`
+
+export const CardsContainer = styled.div`
+  border: 1px solid green;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+
+  padding-bottom: 1rem;
 `
