@@ -4,16 +4,13 @@ export const Container = styled.div`
   height: 100vh;
   padding: 1rem;
   margin: 0 auto;
-  /* margin-top: -4rem; */
 
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   gap: 4rem;
 
   max-width: 62.5rem;
-  /* border: 1px solid red; */
 `
 
 export const InputContainer = styled.div`
@@ -37,8 +34,6 @@ export const InputContainer = styled.div`
 `
 
 export const CardsContainer = styled.div`
-  border: 1px solid green;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
