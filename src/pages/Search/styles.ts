@@ -11,6 +11,13 @@ export const Container = styled.div`
   gap: 4rem;
 
   max-width: 62.5rem;
+
+  animation: appear 2s;
+
+  @keyframes appear {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
 `
 
 export const InputContainer = styled.div`

@@ -7,10 +7,23 @@ export const Container = styled.div`
   flex-direction: column;
   max-width: 15.625rem;
 
+  animation: fromleft 2s;
+
   @media screen and (min-width: 768px) {
     flex-direction: row;
     width: 27rem;
     max-width: 27rem;
+  }
+
+  @keyframes fromleft {
+    from {
+    transform: translateX(-100px);
+    opacity: 0;
+    }
+    to {
+    transform: translateX(0);
+    opacity: 1;
+    }
   }
 `
 export const ImgContainer = styled.div`

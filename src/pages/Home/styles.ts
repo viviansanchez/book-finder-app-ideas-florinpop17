@@ -14,6 +14,8 @@ export const Container = styled.div`
 
   max-width: 62.5rem;
 
+  animation: appear 2s;
+
   p {
     text-align: center;
     font-size: 1.2rem;
@@ -28,6 +30,11 @@ export const Container = styled.div`
     p {
       font-size: 2rem;
     }
+  }
+
+  @keyframes appear {
+    from {opacity: 0}
+    to {opacity: 1}
   }
 `
 
