@@ -44,7 +44,7 @@ export async function getBooks(name: string): Promise<BooksProps[]> {
         id: item.id,
         title: item.volumeInfo.title,
         authors: item.volumeInfo.authors,
-        image: item.volumeInfo.imageLinks.smallThumbnail,
+        image: (item.volumeInfo.imageLinks != undefined ? item.volumeInfo.imageLinks.smallThumbnail : ''),
         infoLink: item.volumeInfo.infoLink,
         publishedDate: item.volumeInfo.publishedDate,
         publisher: item.volumeInfo.publisher
@@ -54,6 +54,8 @@ export async function getBooks(name: string): Promise<BooksProps[]> {
     return books
 
   } catch (error) {
+    console.log(error)
     return []
   }
 }
+
