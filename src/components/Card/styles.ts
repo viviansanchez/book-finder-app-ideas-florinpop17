@@ -21,6 +21,8 @@ export const ImgContainer = styled.div`
   }
 
   @media screen and (min-width: 768px) {
+    max-width: 9rem;
+
     > img {
       width: 7.125rem;
     }
