@@ -21,16 +21,28 @@ export function Card({ data }: Props) {
 
       <BookInfoContainer>
         <h2>{data.title}</h2>
-        <p>
-          <span>Autores: </span>
-          {
-            data.authors.map(author => {
-              return <span className="author-name">{author} </span>
-            })
-          }
-        </p>
-        <p><span>Editora: </span>{data.publisher}</p>
-        <p><span>Data de publicação: </span>{data.publishedDate}</p>
+
+        {
+          data.authors &&
+          <p>
+            <span>Autores: </span>
+            {data.authors &&
+              data.authors.map(author => {
+                return <span className="author-name">{author} </span>
+              })
+            }
+          </p>
+        }
+
+        {
+          data.publisher &&
+          <p><span>Editora: </span>{data.publisher}</p>
+        }
+
+        {
+          data.publisher &&
+          <p><span>Data de publicação: </span>{data.publishedDate}</p>
+        }
 
         <a href={extraInfo} target="_blank">Saiba mais</a>
       </BookInfoContainer>
