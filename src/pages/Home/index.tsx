@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import { Container } from './styles'
 
 import { Logo } from '../../components/Logo'
@@ -11,7 +13,9 @@ export function Home() {
       <p>
         Boas vindas! Este é o <strong>BookFinder</strong>. Aqui você pode pesquisar por um livro utilizando o seu título, nome do autor ou editora.
       </p>
-      <Button title='Pesquisar' />
+      <Link to='/search'>
+        <Button title='Pesquisar' />
+      </Link>
     </Container>
   )
 }

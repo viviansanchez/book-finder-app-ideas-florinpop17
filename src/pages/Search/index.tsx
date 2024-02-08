@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import { Container, InputContainer, CardsContainer } from './styles'
 
 import { IoIosSearch } from "react-icons/io";
@@ -24,10 +26,10 @@ export function Search() {
 
   return (
     <Container>
-      <a href="#">
+      <Link to='/'>
         <Logo />
-      </a>
-      {/* link fron react-router-dom instead of a*/}
+      </Link>
+
       <InputContainer>
         <Input
           placeholder='Pesquisar por título, autor, editora...'
