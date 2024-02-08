@@ -2,6 +2,8 @@ import { Container, ImgContainer, BookInfoContainer } from "./styles";
 
 import { BooksProps } from "../../services/getBooks";
 
+import imageNotFound from '../../assets/image-not-found.png'
+
 interface Props {
   data: BooksProps
 }
@@ -9,14 +11,12 @@ interface Props {
 export function Card({ data }: Props) {
   const imageAltText = `Imagem da capa do livro ${data.title}`
   const extraInfo = `${data.infoLink}`
-
-  // const imageSource = data.image == '' ? '../../assets/image-not-found.svg' : data.image
-  // this is not working unfortunately, but at least the app doesnt break now. leaving this here as reminder, since it's not highest priority to solve. 
+  const imageSource = (data.image == '') ? imageNotFound : data.image
 
   return (
     <Container >
       <ImgContainer>
-        <img src={data.image} alt={imageAltText} />
+        <img src={imageSource} alt={imageAltText} />
       </ImgContainer>
 
       <BookInfoContainer>
