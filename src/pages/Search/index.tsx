@@ -9,6 +9,7 @@ import { IoIosSearch } from "react-icons/io";
 import { Logo } from '../../components/Logo'
 import { Input } from '../../components/Input'
 import { Card } from '../../components/Card';
+import { NoSearchPlaceholder } from '../../components/NoSearchPlaceholder';
 
 import { getBooks, BooksProps } from '../../services/getBooks';
 
@@ -42,12 +43,16 @@ export function Search() {
 
       <CardsContainer>
         {
+          books.length == 0 &&
+          <NoSearchPlaceholder />
+        }
+
+        {books &&
           books.map(book => {
             return <Card data={book} key={book.id} />
           })
         }
       </CardsContainer>
-
 
     </Container>
   )
